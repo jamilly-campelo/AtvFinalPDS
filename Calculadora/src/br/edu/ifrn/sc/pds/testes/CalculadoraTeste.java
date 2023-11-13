@@ -1,7 +1,6 @@
 package br.edu.ifrn.sc.pds.testes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.Test;
 
@@ -38,18 +37,13 @@ public class CalculadoraTeste {
 	}
 	
 	@Test
-	public void deveriaLancarIllegalArgumentException(){
-		assertThrows(IllegalArgumentException.class, () -> c.dividir(5, 0));
-	}
-	
-	@Test
 	public void deveriaLancarMensagemDeExcecaoCorreta() {
 		try {
 			c.dividir(5, 0);
-			fail("NÃ£o lanÃ§ou a Exception esperada");
+			fail("Não lançou a Exception esperada");
 		}
 		catch(IllegalArgumentException e) {
-			assertEquals("NÃ£o Ã© possÃ­vel dividir por zero.", e.getMessage());
+			assertEquals("Não é possível dividir por zero.", e.getMessage());
 		}
 	}
 	

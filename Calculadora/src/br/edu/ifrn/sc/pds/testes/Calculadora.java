@@ -20,7 +20,7 @@ public class Calculadora {
 	
 	public double dividir (double n1, double n2) {
 		if(n2 == 0){
-			throw new IllegalArgumentException("NÃ£o Ã© possÃ­vel dividir por zero.");
+			throw new IllegalArgumentException("Não é possível dividir por zero.");
 		} else {
 			return n1 / n2;
 		}

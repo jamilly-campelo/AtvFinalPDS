@@ -2,30 +2,6 @@ package br.edu.ifrn.pds.emprestimo;
 
 public class Emprestimo {
 	
-	/* private double valorEmprestado;
-	private double taxaJuros;
-	
-	public Emprestimo(double valorEmprestado, double taxaJuros) {
-		this.valorEmprestado = valorEmprestado;
-		this.taxaJuros = taxaJuros;
-	}
-
-	public double getValorEmprestado() {
-		return valorEmprestado;
-	}
-	
-	public double getTaxaJuros() {
-		return taxaJuros;
-	}
-
-	public void setValorEmprestado(double valorEmprestado) {
-		this.valorEmprestado = valorEmprestado;
-	}
-	
-	public void setTaxaJuros(double taxaJuros) {
-		this.taxaJuros = taxaJuros;
-	} */
-	
 	public Emprestimo() {
 		
 	}
@@ -36,9 +12,9 @@ public class Emprestimo {
 		double juros = valorEmprestado*taxaJuros;
 		
 		if (taxaJuros == 0) {
-			throw new IllegalArgumentException("A taxa de juros n√£o pode ser nula.");
+			throw new IllegalArgumentException("A taxa de juros n„o pode ser nula.");
 		} else if (taxaJuros < 0) {
-			throw new IllegalArgumentException("A taxa de juros n√£o pode ser negativa.");
+			throw new IllegalArgumentException("A taxa de juros n„o pode ser negativa.");
 		} else {
 			if(3000 <= valorEmprestado && valorEmprestado <= 8000) {
 				qtdParcelas = 12;
@@ -49,7 +25,7 @@ public class Emprestimo {
 			} else if (50000 < valorEmprestado && valorEmprestado <= 150000){
 				qtdParcelas = 120;
 			} else {
-				throw new IllegalArgumentException("N√£o existe empr√©stimos para esse valor.");
+				throw new IllegalArgumentException("N„o existe emprÈstimos para esse valor.");
 			}
 		}
 		
